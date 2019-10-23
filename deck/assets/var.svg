@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="150px" preserveAspectRatio="none" style="width:453px;height:150px;" version="1.1" viewBox="0 0 453 150" width="453px" zoomAndPan="magnify"><defs><filter height="300%" id="f1oekedoxby1vh" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><ellipse cx="16" cy="33" fill="#000000" filter="url(#f1oekedoxby1vh)" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#FEFECE" filter="url(#f1oekedoxby1vh)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="50" x="61" y="8"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="61" x2="111" y1="34.2969" y2="34.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="17" x="77.5" y="25.9951">s1</text><rect fill="#FEFECE" filter="url(#f1oekedoxby1vh)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="50" x="249" y="8"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="249" x2="299" y1="34.2969" y2="34.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="17" x="265.5" y="25.9951">s2</text><ellipse cx="274" cy="129" fill="none" filter="url(#f1oekedoxby1vh)" rx="10" ry="10" style="stroke: #000000; stroke-width: 1.0;"/><ellipse cx="274.5" cy="129.5" fill="#000000" rx="6" ry="6" style="stroke: none; stroke-width: 1.0;"/><!--MD5=[0851647b0d029610cd0ab4962f9816f7]
+link *start to s1--><path d="M26.1172,33 C35.9441,33 45.7711,33 55.5981,33 " fill="none" id="*start-&gt;s1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="60.7369,33,51.7369,29,55.7369,33,51.7369,37,60.7369,33" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[d077887d53ded09ce69bd222ebbe95e1]
+link s1 to s2--><path d="M111.355,33 C145.649,33 206.748,33 243.507,33 " fill="none" id="s1-&gt;s2" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="248.748,33,239.748,29,243.748,33,239.748,37,248.748,33" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="101" x="129.5" y="26.0669">accepted_chars</text><!--MD5=[81dec36d2cf465b1e399bc92e9f830d9]
+link s2 to s2--><path d="M299.278,23.864 C316.773,21.095 334,24.141 334,33 C334,40.9596 320.095,44.2262 304.582,42.7999 " fill="none" id="s2-&gt;s2" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="299.278,42.1362,307.7125,47.2213,304.2394,42.7562,308.7045,39.2831,299.278,42.1362" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="101" x="340" y="37.5669">accepted_chars</text><!--MD5=[feecdfac5bcfd1ac637cb1a50c063d90]
+link s2 to *end--><path d="M274,58.2073 C274,75.8423 274,99.1261 274,113.8351 " fill="none" id="s2-&gt;*end" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="274,118.8399,278,109.8399,274,113.8399,270,109.8399,274,118.8399" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[eaa0dbe13beac14fb6be3caa92947219]
+@startuml
+[*]->s1
+s1->s2:accepted_chars
+s2->s2:accepted_chars
+s2-down->[*]
+@enduml
+
+PlantUML version 1.2019.11(Sun Sep 22 10:02:15 UTC 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.7.0_25-b15
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

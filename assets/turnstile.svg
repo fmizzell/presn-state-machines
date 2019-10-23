@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="196px" preserveAspectRatio="none" style="width:240px;height:196px;" version="1.1" viewBox="0 0 240 196" width="240px" zoomAndPan="magnify"><defs><filter height="300%" id="f1xji3dm2ckdhf" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><ellipse cx="194.5" cy="33" fill="#000000" filter="url(#f1xji3dm2ckdhf)" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#FEFECE" filter="url(#f1xji3dm2ckdhf)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="70" x="86.5" y="135"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="86.5" x2="156.5" y1="161.2969" y2="161.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="50" x="96.5" y="152.9951">Locked</text><rect fill="#FEFECE" filter="url(#f1xji3dm2ckdhf)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="85" x="6" y="8"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="6" x2="91" y1="34.2969" y2="34.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="65" x="16" y="25.9951">Unlocked</text><!--MD5=[272d52b63f8edf95f465f2ca1273060c]
+link *start to Locked--><path d="M190.814,42.529 C184.84,56.089 172.405,83.254 159.5,105 C154.465,113.4843 148.52,122.367 142.847,130.4214 " fill="none" id="*start-&gt;Locked" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="139.731,134.8031,148.2071,129.7876,142.6291,130.7287,141.688,125.1506,139.731,134.8031" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[cba7272a8b87644e48ea145430b6e72a]
+link Locked to Unlocked--><path d="M108.674,134.8085 C101.2308,120.9852 91.5617,103.3913 82.5,88 C77.5678,79.623 72.0221,70.644 66.8629,62.46 " fill="none" id="Locked-&gt;Unlocked" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="64.0429,58.004,65.4767,67.7479,66.7171,62.2288,72.2363,63.4692,64.0429,58.004" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="28" x="92.5" y="101.0669">Coin</text><!--MD5=[cb081e7762ac6e832e2c6eea590380c3]
+link Unlocked to Locked--><path d="M41.6887,58.311 C39.0318,72.662 38.1433,90.7482 45.5,105 C53.3721,120.2502 67.7609,132.1313 81.9177,140.8179 " fill="none" id="Unlocked-&gt;Locked" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="86.2963,143.4114,80.5912,135.3832,81.9943,140.8633,76.5142,142.2663,86.2963,143.4114" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="31" x="46.5" y="101.0669">Push</text><!--MD5=[c5c9611ed040133fcf8320ed299fd3a8]
+link Locked to Locked--><path d="M156.797,148.7837 C175.048,147.0581 191.5,150.7969 191.5,160 C191.5,168.3403 177.988,172.1928 161.871,171.5575 " fill="none" id="Locked-&gt;Locked" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="156.797,171.2163,165.5081,175.8116,161.7857,171.552,166.0453,167.8296,156.797,171.2163" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="31" x="197.5" y="164.5669">Push</text><!--MD5=[4d8b0ec4de576514ca4095610ee14fd0]
+link Unlocked to Unlocked--><path d="M91.1438,21.535 C109.879,20.52 126,24.342 126,33 C126,40.846 112.76,44.721 96.3329,44.623 " fill="none" id="Unlocked-&gt;Unlocked" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="91.1438,44.465,100.0179,48.737,96.1415,44.6171,100.2613,40.7407,91.1438,44.465" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="28" x="132" y="37.5669">Coin</text><!--MD5=[a0c19e7efde431d71bb5696b22249b42]
+@startuml
+[*] - -> Locked
+Locked -down-> Unlocked: Coin
+Locked - -> Locked: Push
+Unlocked -> Unlocked: Coin
+Unlocked -> Locked: Push
+@enduml
+
+PlantUML version 1.2019.12beta6(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.7.0_25-b15
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

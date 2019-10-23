@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+
+    <title>State Machines</title>
+
+    <meta name="description" content="State Machines" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="assets/3rdparty/reveal.js/css/reveal.css" />
+    <link rel="stylesheet" href="assets/3rdparty/reveal.js/css/theme/simple.css" id="theme" />
+
+    <link rel="stylesheet" href="assets/markdeck/styles/zenburn.css" />
+
+        <link rel="stylesheet" href="assets/markdeck/css/markdeck.revealjs.css" />
+    <link rel="stylesheet" href="assets/css/slides.css" />
+
+    <script>
+        window.pdf_render = window.location.search.match(/render=pdf/gi) != null;
+        if (window.pdf_render) {
+            document.write('<link rel="stylesheet" href="assets/css/render-pdf.css" type="text/css">');
+        }
+    </script>
+
+    <link href="assets/css/rerendering.css" rel="stylesheet"></link>
+
+
+</head>
+<body>
+
+
+    <div class="rerendering-message"><h1>R E R E N D E R I N G</h1></div>
+    <div class="markdeck-logo"><a href="https://github.com/arnehilmann/markdeck">powered by markdeck</a></div>
+
+    <div class="reveal">
+        <div class="slides">
+
+<section id="state-machines" class="level1">
+<h1>State Machines</h1>
+<p>Gerardo Gonzalez</p>
+<p><span class="citation" data-cites="fmizzell">@fmizzell</span></p>
+<p><img src="assets/CA-full-RGB_red.svg" alt="CivicActions" width="25%"/></p>
+</section>
+<section id="section" class="level1">
+<h1></h1>
+<p><img src="assets/dkan-avatar-white.svg" alt="DKAN" width="30%"/></p>
+<p>And <a href="https://chriswarrick.com/blog/2017/04/07/csv-is-not-a-standard/">non-standar CSVs</a></p>
+</section>
+<section id="theory-of-computation" class="level1">
+<h1>Theory of Computation</h1>
+<p><small>
+… is the branch that deals with how efficiently problems can be solved on a model of computation, using an algorithm.
+</small></p>
+<ul>
+<li>automata theory and languages</li>
+<li>computability theory</li>
+<li>computational complexity theory</li>
+</ul>
+</section>
+<section id="section-1" class="level1">
+<h1></h1>
+<p><img src="assets/gottfried_leibniz.svg" alt="Gottfried Leibniz" width="50%" /></p>
+</section>
+<section id="entscheidungsproblem" class="level1">
+<h1>Entscheidungsproblem</h1>
+</section>
+<section id="section-2" class="level1">
+<h1></h1>
+<p><img src="assets/TuringInsp.svg" alt="Alan Turing" width="40%" /></p>
+</section>
+<section id="section-3" class="level1">
+<h1></h1>
+<p><img src="assets/turing-machine.png" alt="Turing Machine" width="80%" /></p>
+</section>
+<section id="halting-problem" class="level1">
+<h1>Halting Problem</h1>
+</section>
+<section id="section-4" class="level1">
+<h1></h1>
+<p><img src="assets/SM.svg" alt="State Machine #1" width="80%" />
+<img src="assets/SM2.svg" alt="State Machine #2" width="80%" /></p>
+</section>
+<section id="section-5" class="level1">
+<h1></h1>
+<p><img src="assets/turnstile.svg" alt="Turnstile State Machine" width="80%" /></p>
+</section>
+<section id="back-to-csv" class="level1">
+<h1>Back to CSV</h1>
+</section>
+<section id="section-6" class="level1">
+<h1></h1>
+<pre>
+(?:(?:\r\n)?[ \t])*(?:(?:(?:[^()<>@,;:\\".\[\] \000-\031]+(?:(?:
+(?:\r\n)?[ \t])+|\Z|(?=[\["()<>@,;:\\".\[\]]))|"(?:[^\"\r\\]|\\.
+|(?:(?:\r\n)?[ \t]))*"(?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t]
+)*(?:[^()<>@,;:\\".\[\]\000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=
+[\["()<>@,;:\\".\[\]]))|"(?:[^\"\r\\]|\\.|(?:(?:\r\n)?[ \t]))*"
+(?:(?:\r\n)?[ \t])*))*@(?:(?:\r\n)?[ \t])*(?:[^()<>@,;:\\".\[\] 
+\000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()<>@,;:\\".\[\]]))|
+\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t]
+)*(?:[^()<>@,;:\\".\[\]\000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[
+\["()<>@,;:\\".\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)
+)*|(?:[^()<>@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=
+[\["()<>@,;:\\".\[\]]))|"(?:[^\"\r\\]|\\.|(?:(?:\r\n)?[ \t]))*"(
+?:(?:\r\n)?[ \t])*)*\<(?:(?:\r\n)?[ \t])*(?:@(?:[^()<>@,;:\\".\[\]
+\000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()<>@,;:\\".\[\]]))|
+\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[ \t])*
+(?:[^()<>@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["
+()<>@,;:\\".\[\]]))|\[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*))*(
+?:,@(?:(?:\r\n)?[ \t])*(?:[^()<>@,;:\\".\[\] \000-\031]+(?:(?:(?:
+\r\n)?[ \t])+|\Z|(?=[\["()<>@,;:\\".\[\]]))|\[([^\[\]\r\\]|\\.)*\]
+(?:(?:\r\n)?[ \t])*)(?:\.(?:(?:\r\n)?[\t])*(?:[^()<>@,;:\\".\[\] 
+\000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["()<>@,;:\\".\[\]]))|\
+[([^\[\]\r\\]|\\.)*\](?:(?:\r\n)?[ \t])*))*)*:(?:(?:\r\n)?[ \t])*)?
+(?:[^()<>@,;:\\".\[\] \000-\031]+(?:(?:(?:\r\n)?[ \t])+|\Z|(?=[\["
+()<>@,;:\\".\[\]]))|"(?:[^\"\r\\]| ...
+</pre>
+</section>
+<section id="section-7" class="level1">
+<h1></h1>
+<blockquote>
+<p>Regular expressions describe regular languages</p>
+</blockquote>
+<blockquote>
+<p>A regular language can be defined as a language recognized by a finite automaton</p>
+</blockquote>
+</section>
+<section id="section-8" class="level1">
+<h1></h1>
+<p><img src="assets/regularexpression.svg" alt="" width="40%" /></p>
+<ul>
+<li>a</li>
+<li>accccc</li>
+<li>ab</li>
+<li>abcc</li>
+</ul>
+</section>
+<section id="section-9" class="level1">
+<h1></h1>
+<p><img src="assets/modernregex.svg" alt="" width="20%" /></p>
+<ul>
+<li>1c</li>
+<li>5bcc</li>
+</ul>
+<p><img src="assets/modernregexexpanded.svg" alt="" width="50%" /></p>
+</section>
+<section id="section-10" class="level1">
+<h1></h1>
+<p><img src="assets/regexsm.svg" alt="" width="40%" />
+<img src="assets/regularexpression.svg" alt="" width="20%" /></p>
+<ul>
+<li>accccc ,ab, abcc</li>
+</ul>
+</section>
+<section id="back-to-csv-again" class="level1">
+<h1>Back to CSV … Again!</h1>
+</section>
+<section id="section-11" class="level1">
+<h1></h1>
+<pre>
+first_name, last_name, stuff\n\r
+    Gerardo     , "Gonzalez Calle ", \\ After spaces\\, yes!\n\r
+Camila, """Awesomeness"" Gonzalez", Great\\\nEscape\n\r
+</pre>
+</section>
+<section id="section-12" class="level1">
+<h1></h1>
+<p><img src="assets/fullcsvsm.svg" alt="" width="95%" /></p>
+</section>
+<section id="section-13" class="level1">
+<h1></h1>
+<p><img src="assets/csvsm.svg" alt="" width="90%" /></p>
+</section>
+<section id="section-14" class="level1">
+<h1></h1>
+<pre class="php"><code>if ($endState == sm::STATE_RECORD_END) 
+{
+    $this-&gt;createNewRecord();
+} 
+elseif ($endState == sm::STATE_NEW_FIELD) 
+{
+    $this-&gt;createNewField();
+} 
+elseif (
+  $endState == sm::STATE_CAPTURE || 
+  $endState == sm::STATE_QUOTE_CAPTURE
+) 
+{
+    $this-&gt;addCharToField($input);
+}</code></pre>
+</section>
+<section id="section-15" class="level1">
+<h1></h1>
+<pre class="sql"><code>SELECT field1,field2 FROM blah;</code></pre>
+<pre class="sql"><code>SELECT * FROM blah;</code></pre>
+</section>
+<section id="section-16" class="level1">
+<h1></h1>
+<p><img src="assets/from.svg" alt="" width="70%" /></p>
+<p><img src="assets/var.svg" alt="" width="60%" /></p>
+</section>
+<section id="section-17" class="level1">
+<h1></h1>
+<p><img src="assets/nested.svg" alt="" width="80%" /></p>
+</section>
+<section id="takeaways" class="level1">
+<h1>Takeaways</h1>
+<ul>
+<li>State machines are simple but powerful</li>
+<li>Constraints can help simplify, and crystalize systems</li>
+<li>Validating, parsing, categorizing, control-systems</li>
+</ul>
+</section>
+<section id="recommendation" class="level1">
+<h1>Recommendation</h1>
+<ul>
+<li>!Implementation -&gt; Mental exercise</li>
+</ul>
+</section>
+<section id="resources" class="level1">
+<h1>Resources</h1>
+<ul>
+<li><a href="https://github.com/fmizzell/maquina">PHP State Machine Library</a></li>
+<li><a href="https://github.com/getdkan/csv-parser">State-Machine-Driven CSV Parser</a></li>
+<li><a href="https://github.com/davidkpiano/xstate">JS State Machine Implementation</a></li>
+<li><a href="https://regex101.com">Debug Regular Expressions</a></li>
+<li><a href="http://plantuml.com/">Diagrams as Text</a></li>
+<li><a href="https://www.planttext.com">Diagrams as Test Editor</a></li>
+<li><a href="https://github.com/arnehilmann/markdeck">Presentation as Text</a></li>
+</ul>
+</section>
+<section id="qa" class="level1">
+<h1>Q&amp;A</h1>
+<p><span class="citation" data-cites="fmizzell">@fmizzell</span></p>
+</section>
+
+        </div>
+    </div>
+
+    <script src="assets/3rdparty/jquery.js"></script>
+
+    <script src="assets/3rdparty/reveal.js/lib/js/head.min.js"></script>
+    <script src="assets/3rdparty/reveal.js/js/reveal.js"></script>
+
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: 'true',
+            controlsTutorial: '',
+            controlsLayout: 'bottom-right',
+            controlsBackArrows: 'faded',
+            progress: 'true',
+            defaultTiming: '120',
+            slideNumber: 'true',
+            history: 'true',
+            keyboard: 'true',
+            overview: 'true',
+            center: 'true',
+            touch: 'true',
+            loop: '',
+            rtl: '',
+            shuffle: '',
+            fragments: 'true',
+            embedded: '',
+            help: 'true',
+            showNotes: '',
+            autoPlayMedia: 'null',
+
+            autoSlide: (window.pdf_render) ? 0 : 0,
+
+            autoSlideStoppable: 'true',
+            autoSlideMethod: 'Reveal.navigateNext',
+            mouseWheel: '',
+            hideAddressBar: 'true',
+            previewLinks: '',
+            transition: 'slide',
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade',
+
+            theme: 'simple',
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'assets/3rdparty/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'assets/markdeck/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'assets/3rdparty/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                { src: 'assets/3rdparty/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+            ]
+        });
+    </script>
+
+    
+    <script src="assets/markdeck/revealjs-helper.js"></script>
+    <script>
+        flushleft(".slides .flushleft");
+    </script>
+
+
+</body>
+</html>
